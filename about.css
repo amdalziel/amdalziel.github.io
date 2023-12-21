@@ -1,0 +1,28 @@
+#about-page h1 {
+background-color: #175073; 
+color: white; 
+padding: 2% 5%; 
+letter-spacing: 2px;
+}
+
+#about-page h2 {
+    background-color: white;
+    color: black; 
+    padding: 0% 6% 0% 6%; 
+    }
+
+
+#about-page p {
+    color: black;
+    line-height: 170%;
+    margin: 3% 5%; 
+    text-align: justify;
+    }
+
+.indent-span {
+    padding-left: 10%; 
+    color: #175073; 
+    font-weight: 500;
+    font-size: 2.3rem;
+}
+
