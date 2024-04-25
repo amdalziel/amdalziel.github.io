@@ -7,21 +7,21 @@ const amyAvatar = document.getElementById("banner-movingvisual").childNodes[9].c
 
 // Enlarge avatar visual after 1 second
 
-setTimeout(avatarIncrease, 1000);
+// setTimeout(avatarIncrease, 1000);
 
-function avatarIncrease() {
-    amyAvatar.style.border = "solid 12px #F2B707"; 
-    amyAvatar.style.border = "solid 12px #F2B707"; 
-    return amyAvatar; 
-}; 
+// function avatarIncrease() {
+//     amyAvatar.style.border = "solid 12px #F2B707"; 
+//     amyAvatar.style.border = "solid 12px #F2B707"; 
+//     return amyAvatar; 
+// }; 
 
-setTimeout(avatarDecrease, 2000);
+// setTimeout(avatarDecrease, 2000);
 
-function avatarDecrease() {
-    amyAvatar.style.border = "solid 3px #F2B707"; 
-    amyAvatar.style.border = "solid 3px #F2B707"; 
-    return amyAvatar; 
-}; 
+// function avatarDecrease() {
+//     amyAvatar.style.border = "solid 3px #F2B707"; 
+//     amyAvatar.style.border = "solid 3px #F2B707"; 
+//     return amyAvatar; 
+// }; 
 
 
 // Change icons every 3 seconds
