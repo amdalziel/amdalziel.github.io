@@ -26,3 +26,13 @@ letter-spacing: 2px;
     font-size: 2.3rem;
 }
 
+#musictheory-link {
+    color: #175073;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#musictheory-link:hover {
+    text-decoration: underline;
+}
+
