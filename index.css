@@ -235,6 +235,17 @@ h5 {
     position: relative;
 }
 
+#guruwork-imagearray {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 1%; 
+    border-bottom: 2px solid #175073;
+    position: relative;
+}
+
 #mainimg-recentwork {
     width: 100%; 
     max-height: 400px;
@@ -244,6 +255,14 @@ h5 {
 }
 
 #mainCatImg-recentwork {
+    width: 100%; 
+    max-height: 400px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    overflow-y: scroll;
+}
+
+#mainimgGuru-recentwork {
     width: 100%; 
     max-height: 400px;
     margin-top: 5%;
@@ -261,6 +280,12 @@ h5 {
     width: 100%; 
     object-fit: cover;
 } 
+
+#mainimgGuru-recentwork > img {
+    width: 100%; 
+    object-fit: cover;
+
+}
 
 
 #multipleimg-recentwork { 
@@ -282,6 +307,17 @@ h5 {
     align-items: center;
 }
 
+
+#multipleGuruImg-recentwork { 
+    margin-right: 5%; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
 #multipleimg-recentwork > div {
     width: 50px; 
     height: 50px; 
@@ -295,6 +331,18 @@ h5 {
 }
 
 #multipleCatImg-recentwork > div {
+    width: 50px; 
+    height: 50px; 
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 10%; 
+    border-radius: 3px;
+    display: flex;
+    padding: 4%; 
+ background-color: #175073;
+}
+
+#multipleGuruImg-recentwork > div {
     width: 50px; 
     height: 50px; 
     margin-top: 1%;
@@ -371,6 +419,44 @@ h5 {
     object-fit: cover;
     cursor: pointer;
 }
+
+#boxGuru1-recent > img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#boxGuru2-recent > img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#boxGuru3-recent > img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#boxGuru4-recent > img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    cursor: pointer;
+}
+
+#boxGuru5-recent > img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+
 
 #extraicons {
     color: black; 

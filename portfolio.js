@@ -1,5 +1,20 @@
 window.addEventListener("DOMContentLoaded", function(){
 
+
+  // Travel Guru Display : 
+  const mainImgGuru = document.getElementById("mainimgGuru-recentwork");
+
+  for (let i = 1; i <= 5; i++) {
+      const boxGuruImg = document.getElementById(`boxGuru${i}-recent`);
+      const boxGuruURL = boxGuruImg.children[0].getAttribute("src");
+
+      boxGuruImg.addEventListener("click", (e) => {
+          mainImgGuru.innerHTML = `<img src="${boxGuruURL}" width="100%" />`;
+          e.preventDefault();
+      });
+  }
+
+
 // Custom Clocks Display : 
 
 // Get reference to the main image: 
