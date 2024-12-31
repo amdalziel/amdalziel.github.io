@@ -1,24 +1,55 @@
 window.addEventListener("DOMContentLoaded", function(){
 
 
-  // Travel Guru Display : 
-  const mainImgGuru = document.getElementById("mainimgGuru-recentwork");
+// Travel Guru Display : 
+const mainImgGuru = document.getElementById("mainimgGuru-recentwork");
 
+// Function to clear overlays from all boxes
+function clearGuruOverlays() {
   for (let i = 1; i <= 5; i++) {
-      const boxGuruImg = document.getElementById(`boxGuru${i}-recent`);
-      const boxGuruURL = boxGuruImg.children[0].getAttribute("src");
-
-      boxGuruImg.addEventListener("click", (e) => {
-          mainImgGuru.innerHTML = `<img src="${boxGuruURL}" width="100%" />`;
-          e.preventDefault();
-      });
+    const boxGuruImg = document.getElementById(`boxGuru${i}-recent`);
+    const overlay = boxGuruImg.querySelector(".overlay");
+    if (overlay) {
+      overlay.style.display = "none"; 
+    }
   }
+}
+
+// Add click event to each box
+for (let i = 1; i <= 5; i++) {
+  const boxGuruImg = document.getElementById(`boxGuru${i}-recent`);
+  const boxGuruURL = boxGuruImg.children[0].getAttribute("src");
+
+  // Add overlay element to each box
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  overlay.innerHTML = '<span class="material-symbols-outlined material-symbols-outlined-portfolio">visibility</span>'; 
+  boxGuruImg.appendChild(overlay);
+
+  boxGuruImg.addEventListener("click", (e) => {
+    clearGuruOverlays(); 
+    overlay.style.display = "flex"; 
+    mainImgGuru.innerHTML = `<img src="${boxGuruURL}" width="100%" />`;
+    e.preventDefault();
+  });
+}
+
 
 
 // Custom Clocks Display : 
 
 // Get reference to the main image: 
 const mainImg = document.getElementById("mainimg-recentwork"); 
+
+function clearOverlays() {
+  for (let i = 1; i <= 5; i++) {
+    const boxImg = document.getElementById(`box${i}-recent`);
+    const overlay = boxImg.querySelector(".overlay");
+    if (overlay) {
+      overlay.style.display = "none"; 
+    }
+  }
+}
 
 
 // Five boxes are set up with "thumbnail" images:
@@ -29,8 +60,16 @@ const mainImg = document.getElementById("mainimg-recentwork");
 for (let i = 1; i <= 5; i++) {
     const boxImg = document.getElementById(`box${i}-recent`);
     const boxURL = boxImg.children[0].getAttribute("src");
+
+   // Add overlay element to each box
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  overlay.innerHTML = '<span class="material-symbols-outlined material-symbols-outlined-portfolio">visibility</span>'; 
+  boxImg.appendChild(overlay);
   
     boxImg.addEventListener("click", (e) => {
+      clearOverlays(); 
+      overlay.style.display = "flex"; 
       mainImg.innerHTML = `<img src=${boxURL} width="100%" />`;
       e.preventDefault();
     });
@@ -43,6 +82,16 @@ for (let i = 1; i <= 5; i++) {
 // Get reference to the main image: 
 const mainCatImg = document.getElementById("mainCatImg-recentwork"); 
 
+function clearCatOverlays() {
+  for (let i = 1; i <= 4; i++) {
+    const boxCatImg = document.getElementById(`boxCat${i}-recent`);
+    const overlay = boxCatImg.querySelector(".overlay");
+    if (overlay) {
+      overlay.style.display = "none"; 
+    }
+  }
+}
+
 
 // Four boxes are set up with "thumbnail" images:
 // Get reference to each box - using variable boxCatImg
@@ -52,8 +101,16 @@ const mainCatImg = document.getElementById("mainCatImg-recentwork");
 for (let i = 1; i <= 4; i++) {
     const boxCatImg = document.getElementById(`boxCat${i}-recent`);
     const boxCatURL = boxCatImg.children[0].getAttribute("src"); 
+
+
+const overlay = document.createElement("div");
+overlay.className = "overlay";
+overlay.innerHTML = '<span class="material-symbols-outlined material-symbols-outlined-portfolio">visibility</span>'; 
+boxCatImg.appendChild(overlay);
   
     boxCatImg.addEventListener("click", (e) => {
+      clearCatOverlays(); 
+      overlay.style.display = "flex"; 
       mainCatImg.innerHTML = `<img src=${boxCatURL} width="100%" />`;
       e.preventDefault();
     });

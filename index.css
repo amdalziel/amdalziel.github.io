@@ -191,13 +191,19 @@ h5 {
     margin-right: 6%;
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined-index{
     color: #F2B707; 
     position: absolute;
     top: 18%; 
     left: 21%; 
 
 }
+
+.material-symbols-outlined-portfolio{
+    color: white; 
+
+}
+
 
 #recentwork {
     margin-top: 5%; 
@@ -252,6 +258,7 @@ h5 {
     margin-top: 5%;
     margin-bottom: 5%;
     overflow-y: scroll;
+    position: relative;
 }
 
 #mainCatImg-recentwork {
@@ -260,6 +267,7 @@ h5 {
     margin-top: 5%;
     margin-bottom: 5%;
     overflow-y: scroll;
+    position: relative;
 }
 
 #mainimgGuru-recentwork {
@@ -268,7 +276,21 @@ h5 {
     margin-top: 5%;
     margin-bottom: 5%;
     overflow-y: scroll;
+    position: relative;
 }
+
+.scroll_container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .scroll_container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  .scroll_container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
 
 #mainimg-recentwork > img {
     width: 100%; 
@@ -328,6 +350,7 @@ h5 {
     display: flex;
     padding: 4%; 
  background-color: #175073;
+ position: relative;
 }
 
 #multipleCatImg-recentwork > div {
@@ -340,6 +363,7 @@ h5 {
     display: flex;
     padding: 4%; 
  background-color: #175073;
+ position: relative;
 }
 
 #multipleGuruImg-recentwork > div {
@@ -352,6 +376,7 @@ h5 {
     display: flex;
     padding: 4%; 
  background-color: #175073;
+ position: relative;
 }
 
 
@@ -454,6 +479,25 @@ h5 {
     object-fit: cover;
     cursor: pointer;
 }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(23, 80, 115, 0.95)
+    ; 
+    color: white; 
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; 
+    font-family: 'Material Icons';
+    font-size: 24px;
+    pointer-events: none; 
+  }
 
 
 

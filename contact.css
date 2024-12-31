@@ -38,6 +38,8 @@
 
      #submit-btn {
         background-color: #F2B707; 
+        border: 2px solid #175073; 
+        font-size: 1rem;
         margin-top: 2%; 
         margin-bottom: 5%; 
         width: 200px; 
