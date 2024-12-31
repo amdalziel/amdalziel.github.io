@@ -1,6 +1,40 @@
 window.addEventListener("DOMContentLoaded", function(){
 
 
+  // Color Create Display : 
+const mainImgColor = document.getElementById("mainimgColor-recentwork");
+
+// Function to clear overlays from all boxes
+function clearColorOverlays() {
+  for (let i = 1; i <= 2; i++) {
+    const boxColorImg = document.getElementById(`boxColor${i}-recent`);
+    const overlay = boxColorImg.querySelector(".overlay");
+    if (overlay) {
+      overlay.style.display = "none"; 
+    }
+  }
+}
+
+// Add click event to each box
+for (let i = 1; i <= 2; i++) {
+  const boxColorImg = document.getElementById(`boxColor${i}-recent`);
+  const boxColorURL = boxColorImg.children[0].getAttribute("src");
+
+  // Add overlay element to each box
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  overlay.innerHTML = '<span class="material-symbols-outlined material-symbols-outlined-portfolio">visibility</span>'; 
+  boxColorImg.appendChild(overlay);
+
+  boxColorImg.addEventListener("click", (e) => {
+    clearColorOverlays(); 
+    overlay.style.display = "flex"; 
+    mainImgColor.innerHTML = `<img src="${boxColorURL}" width="100%" />`;
+    e.preventDefault();
+  });
+}
+
+
 // Travel Guru Display : 
 const mainImgGuru = document.getElementById("mainimgGuru-recentwork");
 
