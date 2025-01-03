@@ -35,39 +35,6 @@ for (let i = 1; i <= 2; i++) {
 }
 
 
-// Travel Guru Display : 
-const mainImgGuru = document.getElementById("mainimgGuru-recentwork");
-
-// Function to clear overlays from all boxes
-function clearGuruOverlays() {
-  for (let i = 1; i <= 5; i++) {
-    const boxGuruImg = document.getElementById(`boxGuru${i}-recent`);
-    const overlay = boxGuruImg.querySelector(".overlay");
-    if (overlay) {
-      overlay.style.display = "none"; 
-    }
-  }
-}
-
-// Add click event to each box
-for (let i = 1; i <= 5; i++) {
-  const boxGuruImg = document.getElementById(`boxGuru${i}-recent`);
-  const boxGuruURL = boxGuruImg.children[0].getAttribute("src");
-
-  // Add overlay element to each box
-  const overlay = document.createElement("div");
-  overlay.className = "overlay";
-  overlay.innerHTML = '<span class="material-symbols-outlined material-symbols-outlined-portfolio">visibility</span>'; 
-  boxGuruImg.appendChild(overlay);
-
-  boxGuruImg.addEventListener("click", (e) => {
-    clearGuruOverlays(); 
-    overlay.style.display = "flex"; 
-    mainImgGuru.innerHTML = `<img src="${boxGuruURL}" width="100%" />`;
-    e.preventDefault();
-  });
-}
-
 
 
 // Custom Clocks Display : 
