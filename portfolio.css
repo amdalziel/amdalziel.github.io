@@ -202,6 +202,49 @@ figure img {
     }
 
 
+    .portfolioUX_row{
+        display: flex;
+        flex-direction: column;
+        margin-top: 48px; 
+        min-height: 400px;
+    }
+
+    .portfolioUX_title{
+        width: 100%; 
+        border-radius: 20px;
+        margin-bottom: 24px;
+        order: 1;
+    }
+
+    .portfolioUX_info {
+        width: 100%;
+        padding: 0px; 
+        order: 2;
+    }
+
+    blockquote {
+        display: none;
+    }
+
+    span {
+        display: none !important; 
+    }
+
+    i {
+        display: none;
+    }
+
+    .portfolioUX_quoteAuthor {
+        display: none;
+    }
+
+    figure {
+        border-radius: 20px;
+    }
+
+  
+
+
 
 }
 
